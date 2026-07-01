@@ -1,0 +1,295 @@
+{
+  "_meta": {
+    "company": "Northwind Retail",
+    "org_slug": "demo",
+    "org_id": "A1B2C3D4E5F6A7B8C9D0E1F2@AdobeOrg",
+    "snapshot_at": "2026-05-01T08:00:00Z",
+    "captured_by": "aep-audit-demo (synthetic clean-room data)",
+    "environment": "production-fictional",
+    "note": "All identifiers are fabricated. No real organization, dataset, or schema is represented."
+  },
+  "datasets": [
+    {
+      "id": "5f3a1c9e2b7d4a6f8e0c1d2a",
+      "name": "northwind_web_events",
+      "schema_id": "https://ns.adobe.com/demo/schemas/web_events_v1",
+      "enabled": true,
+      "last_batch_at": "2026-04-30T23:55:00Z",
+      "record_count_24h": 4821334,
+      "tags": ["web", "behavioral", "production"]
+    },
+    {
+      "id": "6a4b2d0f3c8e5b7a9f1d2e3b",
+      "name": "northwind_mobile_events",
+      "schema_id": "https://ns.adobe.com/demo/schemas/mobile_events_v1",
+      "enabled": true,
+      "last_batch_at": "2026-04-30T23:50:00Z",
+      "record_count_24h": 2104889,
+      "tags": ["mobile", "behavioral", "production"]
+    },
+    {
+      "id": "7b5c3e1a4d9f6c8b0a2e3f4c",
+      "name": "northwind_crm_profiles",
+      "schema_id": "https://ns.adobe.com/demo/schemas/crm_profile_v2",
+      "enabled": true,
+      "last_batch_at": "2026-04-30T06:00:00Z",
+      "record_count_24h": 18722,
+      "tags": ["crm", "profile", "production"]
+    },
+    {
+      "id": "8c6d4f2b5e0a7d9c1b3f4a5d",
+      "name": "northwind_loyalty_transactions",
+      "schema_id": "https://ns.adobe.com/demo/schemas/transaction_v1",
+      "enabled": true,
+      "last_batch_at": "2026-04-30T22:10:00Z",
+      "record_count_24h": 96541,
+      "tags": ["loyalty", "transaction", "production"]
+    },
+    {
+      "id": "9d7e5a3c6f1b8e0d2c4a5b6e",
+      "name": "northwind_email_engagement",
+      "schema_id": "https://ns.adobe.com/demo/schemas/email_engagement_v1",
+      "enabled": true,
+      "last_batch_at": "2026-04-29T18:30:00Z",
+      "record_count_24h": 53120,
+      "tags": ["email", "marketing", "production"]
+    },
+    {
+      "id": "0e8f6b4d7a2c9f1e3d5b6c7f",
+      "name": "northwind_call_center_logs",
+      "schema_id": "https://ns.adobe.com/demo/schemas/call_center_v1",
+      "enabled": true,
+      "last_batch_at": "2026-04-30T20:00:00Z",
+      "record_count_24h": 8842,
+      "tags": ["support", "production"]
+    },
+    {
+      "id": "1f9a7c5e8b3d0a2f4e6c7d8a",
+      "name": "northwind_store_pos",
+      "schema_id": "https://ns.adobe.com/demo/schemas/transaction_v1",
+      "enabled": true,
+      "last_batch_at": "2026-04-30T23:00:00Z",
+      "record_count_24h": 142087,
+      "tags": ["pos", "transaction", "production"]
+    },
+    {
+      "id": "2a0b8d6f9c4e1b3a5f7d8e9b",
+      "name": "northwind_ad_impressions",
+      "schema_id": "https://ns.adobe.com/demo/schemas/ad_impression_v1",
+      "enabled": true,
+      "last_batch_at": "2026-04-30T23:40:00Z",
+      "record_count_24h": 9930221,
+      "tags": ["advertising", "behavioral", "production"]
+    },
+    {
+      "id": "3b1c9e7a0d5f2c4b6a8e9f0c",
+      "name": "northwind_product_catalog",
+      "schema_id": "https://ns.adobe.com/demo/schemas/product_lookup_v1",
+      "enabled": true,
+      "last_batch_at": "2026-04-28T05:00:00Z",
+      "record_count_24h": 0,
+      "tags": ["lookup", "reference", "production"]
+    },
+    {
+      "id": "4c2d0f8b1e6a3d5c7b9f0a1d",
+      "name": "TEST_clickstream_sandbox",
+      "schema_id": "https://ns.adobe.com/demo/schemas/web_events_v1",
+      "enabled": true,
+      "last_batch_at": "2026-03-12T11:00:00Z",
+      "record_count_24h": 0,
+      "tags": ["test", "sandbox"]
+    }
+  ],
+  "schemas": [
+    {
+      "id": "https://ns.adobe.com/demo/schemas/web_events_v1",
+      "title": "Web Events v1",
+      "class": "https://ns.adobe.com/xdm/context/experienceevent",
+      "fields": [
+        {"path": "_id", "type": "string", "required": true},
+        {"path": "timestamp", "type": "date-time", "required": true},
+        {"path": "web.webPageDetails.URL", "type": "string", "required": false},
+        {"path": "web.webPageDetails.name", "type": "string", "required": false},
+        {"path": "web.webInteraction.linkClicks.value", "type": "integer", "required": false},
+        {"path": "endUserIDs._experience.aaid.id", "type": "string", "required": false},
+        {"path": "identityMap.ECID", "type": "string", "required": false},
+        {"path": "commerce.purchases.value", "type": "number", "required": false}
+      ]
+    },
+    {
+      "id": "https://ns.adobe.com/demo/schemas/mobile_events_v1",
+      "title": "Mobile Events v1",
+      "class": "https://ns.adobe.com/xdm/context/experienceevent",
+      "fields": [
+        {"path": "_id", "type": "string", "required": true},
+        {"path": "timestamp", "type": "date-time", "required": true},
+        {"path": "application.id", "type": "string", "required": false},
+        {"path": "application.name", "type": "string", "required": false},
+        {"path": "device.model", "type": "string", "required": false},
+        {"path": "identityMap.ECID", "type": "string", "required": false},
+        {"path": "placeContext.geo.countryCode", "type": "string", "required": false}
+      ]
+    },
+    {
+      "id": "https://ns.adobe.com/demo/schemas/crm_profile_v2",
+      "title": "CRM Profile v2",
+      "class": "https://ns.adobe.com/xdm/context/profile",
+      "fields": [
+        {"path": "_id", "type": "string", "required": true},
+        {"path": "person.name.firstName", "type": "string", "required": false},
+        {"path": "person.name.lastName", "type": "string", "required": false},
+        {"path": "personalEmail.address", "type": "string", "required": false},
+        {"path": "identityMap.CRMID", "type": "string", "required": true},
+        {"path": "loyalty.tier", "type": "string", "required": false},
+        {"path": "consents.marketing.email.val", "type": "string", "required": false}
+      ]
+    },
+    {
+      "id": "https://ns.adobe.com/demo/schemas/transaction_v1",
+      "title": "Transaction v1",
+      "class": "https://ns.adobe.com/xdm/context/experienceevent",
+      "fields": [
+        {"path": "_id", "type": "string", "required": true},
+        {"path": "timestamp", "type": "date-time", "required": true},
+        {"path": "commerce.order.purchaseID", "type": "string", "required": false},
+        {"path": "commerce.order.priceTotal", "type": "number", "required": false},
+        {"path": "productListItems.SKU", "type": "string", "required": false},
+        {"path": "identityMap.CRMID", "type": "string", "required": false}
+      ]
+    },
+    {
+      "id": "https://ns.adobe.com/demo/schemas/email_engagement_v1",
+      "title": "Email Engagement v1",
+      "class": "https://ns.adobe.com/xdm/context/experienceevent",
+      "fields": [
+        {"path": "_id", "type": "string", "required": true},
+        {"path": "timestamp", "type": "date-time", "required": true},
+        {"path": "directMarketing.emailDelivered.value", "type": "integer", "required": false},
+        {"path": "directMarketing.emailOpened.value", "type": "integer", "required": false},
+        {"path": "directMarketing.emailClicked.value", "type": "integer", "required": false},
+        {"path": "identityMap.CRMID", "type": "string", "required": false}
+      ]
+    },
+    {
+      "id": "https://ns.adobe.com/demo/schemas/call_center_v1",
+      "title": "Call Center Log v1",
+      "class": "https://ns.adobe.com/xdm/context/experienceevent",
+      "fields": [
+        {"path": "_id", "type": "string", "required": true},
+        {"path": "timestamp", "type": "date-time", "required": true},
+        {"path": "callDetails.reason", "type": "string", "required": false},
+        {"path": "callDetails.durationSeconds", "type": "integer", "required": false},
+        {"path": "identityMap.CRMID", "type": "string", "required": false}
+      ]
+    },
+    {
+      "id": "https://ns.adobe.com/demo/schemas/ad_impression_v1",
+      "title": "Ad Impression v1",
+      "class": "https://ns.adobe.com/xdm/context/experienceevent",
+      "fields": [
+        {"path": "_id", "type": "string", "required": true},
+        {"path": "timestamp", "type": "date-time", "required": true},
+        {"path": "advertising.impressions.value", "type": "integer", "required": false},
+        {"path": "advertising.adAssetReference.campaign", "type": "string", "required": false},
+        {"path": "identityMap.ECID", "type": "string", "required": false}
+      ]
+    },
+    {
+      "id": "https://ns.adobe.com/demo/schemas/product_lookup_v1",
+      "title": "Product Catalog Lookup v1",
+      "class": "https://ns.adobe.com/xdm/classes/lookup",
+      "fields": [
+        {"path": "SKU", "type": "string", "required": true},
+        {"path": "productName", "type": "string", "required": false},
+        {"path": "category", "type": "string", "required": false},
+        {"path": "listPrice", "type": "number", "required": false}
+      ]
+    }
+  ],
+  "data_views": [
+    {
+      "id": "dv_7f3e9a1c5b2d8e4a",
+      "name": "Northwind Web + Mobile (Behavioral)",
+      "datasets": ["5f3a1c9e2b7d4a6f8e0c1d2a", "6a4b2d0f3c8e5b7a9f1d2e3b"],
+      "timezone": "America/New_York",
+      "session_timeout_minutes": 30,
+      "person_id": "identityMap.ECID",
+      "stitching_enabled": true,
+      "lookback_months": 13
+    },
+    {
+      "id": "dv_2a8c4e6b1d9f3a5c",
+      "name": "Northwind Omnichannel Revenue",
+      "datasets": ["8c6d4f2b5e0a7d9c1b3f4a5d", "1f9a7c5e8b3d0a2f4e6c7d8a", "7b5c3e1a4d9f6c8b0a2e3f4c"],
+      "timezone": "America/New_York",
+      "session_timeout_minutes": 30,
+      "person_id": "identityMap.CRMID",
+      "stitching_enabled": true,
+      "lookback_months": 25
+    },
+    {
+      "id": "dv_9b5d1f7a3c8e2b6d",
+      "name": "Northwind Marketing Engagement",
+      "datasets": ["9d7e5a3c6f1b8e0d2c4a5b6e", "2a0b8d6f9c4e1b3a5f7d8e9b"],
+      "timezone": "America/New_York",
+      "session_timeout_minutes": 60,
+      "person_id": "identityMap.CRMID",
+      "stitching_enabled": false,
+      "lookback_months": 13
+    }
+  ],
+  "segments": [
+    {
+      "id": "seg_a1f5c9e3b7d2",
+      "name": "High-Value Loyalty Members",
+      "definition": "loyalty.tier IN ('gold','platinum') AND commerce.order.priceTotal > 500 (trailing 90d)",
+      "data_view_id": "dv_2a8c4e6b1d9f3a5c",
+      "size_estimate": 41200,
+      "enabled": true
+    },
+    {
+      "id": "seg_b2e6d0f4c8a3",
+      "name": "Cart Abandoners (7d)",
+      "definition": "web.webInteraction = addToCart AND NOT commerce.purchases (trailing 7d)",
+      "data_view_id": "dv_7f3e9a1c5b2d8e4a",
+      "size_estimate": 88340,
+      "enabled": true
+    },
+    {
+      "id": "seg_c3f7e1a5d9b4",
+      "name": "Email Engaged Non-Buyers",
+      "definition": "directMarketing.emailClicked > 0 AND NOT commerce.purchases (trailing 30d)",
+      "data_view_id": "dv_9b5d1f7a3c8e2b6d",
+      "size_estimate": 27510,
+      "enabled": true
+    },
+    {
+      "id": "seg_d4a8f2b6e0c5",
+      "name": "Mobile App Active Users",
+      "definition": "application.id EXISTS (trailing 30d)",
+      "data_view_id": "dv_7f3e9a1c5b2d8e4a",
+      "size_estimate": 612008,
+      "enabled": true
+    }
+  ],
+  "dimensions": [
+    {"data_view_id": "dv_7f3e9a1c5b2d8e4a", "name": "Page Name", "source_field": "web.webPageDetails.name"},
+    {"data_view_id": "dv_7f3e9a1c5b2d8e4a", "name": "Page URL", "source_field": "web.webPageDetails.URL"},
+    {"data_view_id": "dv_7f3e9a1c5b2d8e4a", "name": "Device Model", "source_field": "device.model"},
+    {"data_view_id": "dv_2a8c4e6b1d9f3a5c", "name": "Loyalty Tier", "source_field": "loyalty.tier"},
+    {"data_view_id": "dv_2a8c4e6b1d9f3a5c", "name": "Product SKU", "source_field": "productListItems.SKU"},
+    {"data_view_id": "dv_9b5d1f7a3c8e2b6d", "name": "Country", "source_field": "placeContext.geo.countryCode"}
+  ],
+  "metrics": [
+    {"data_view_id": "dv_7f3e9a1c5b2d8e4a", "name": "Link Clicks", "source_field": "web.webInteraction.linkClicks.value"},
+    {"data_view_id": "dv_7f3e9a1c5b2d8e4a", "name": "Orders", "source_field": "commerce.purchases.value"},
+    {"data_view_id": "dv_2a8c4e6b1d9f3a5c", "name": "Revenue", "source_field": "commerce.order.priceTotal"},
+    {"data_view_id": "dv_9b5d1f7a3c8e2b6d", "name": "Email Opens", "source_field": "directMarketing.emailOpened.value"},
+    {"data_view_id": "dv_9b5d1f7a3c8e2b6d", "name": "Email Clicks", "source_field": "directMarketing.emailClicked.value"}
+  ],
+  "stitching": {
+    "dv_7f3e9a1c5b2d8e4a": {"coverage_pct": 91.4, "method": "private-graph", "primary_identity": "ECID"},
+    "dv_2a8c4e6b1d9f3a5c": {"coverage_pct": 88.9, "method": "private-graph", "primary_identity": "CRMID"},
+    "dv_9b5d1f7a3c8e2b6d": {"coverage_pct": 0.0, "method": "none", "primary_identity": "CRMID"}
+  }
+}

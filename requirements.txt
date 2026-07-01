@@ -1,0 +1,9 @@
+# AEP/CJA Config Health & Drift Audit
+#
+# Zero external dependencies. This tool runs on the Python 3.8+ standard
+# library only (argparse, datetime, html, json, os, sys, collections).
+#
+# There is intentionally nothing to install:
+#     python3 audit.py
+#
+# No pip packages, no network access, no paid infrastructure required.

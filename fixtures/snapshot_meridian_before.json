@@ -1,0 +1,298 @@
+{
+  "_meta": {
+    "company": "Meridian Capital (Fictional)",
+    "org_slug": "meridian-cap",
+    "org_id": "F9E8D7C6B5A4F3E2D1C0B9A8@AdobeOrg",
+    "snapshot_at": "2026-04-15T07:00:00Z",
+    "captured_by": "aep-audit-demo (synthetic clean-room data)",
+    "environment": "production-fictional",
+    "note": "All identifiers are fabricated. No real organization, advisor, client, or financial institution is represented."
+  },
+  "datasets": [
+    {
+      "id": "aa1b2c3d4e5f6a7b8c9d0e1f",
+      "name": "meridian_advisor_portal_events",
+      "schema_id": "https://ns.adobe.com/meridian/schemas/advisor_web_events_v1",
+      "enabled": true,
+      "last_batch_at": "2026-04-14T22:45:00Z",
+      "record_count_24h": 318420,
+      "tags": ["web", "behavioral", "production", "advisor"]
+    },
+    {
+      "id": "bb2c3d4e5f6a7b8c9d0e1f2a",
+      "name": "meridian_client_portal_events",
+      "schema_id": "https://ns.adobe.com/meridian/schemas/client_web_events_v1",
+      "enabled": true,
+      "last_batch_at": "2026-04-14T23:00:00Z",
+      "record_count_24h": 892104,
+      "tags": ["web", "behavioral", "production", "client"]
+    },
+    {
+      "id": "cc3d4e5f6a7b8c9d0e1f2a3b",
+      "name": "meridian_crm_advisor_profiles",
+      "schema_id": "https://ns.adobe.com/meridian/schemas/advisor_profile_v1",
+      "enabled": true,
+      "last_batch_at": "2026-04-14T06:00:00Z",
+      "record_count_24h": 1204,
+      "tags": ["crm", "profile", "production", "advisor"]
+    },
+    {
+      "id": "dd4e5f6a7b8c9d0e1f2a3b4c",
+      "name": "meridian_crm_client_profiles",
+      "schema_id": "https://ns.adobe.com/meridian/schemas/client_profile_v2",
+      "enabled": true,
+      "last_batch_at": "2026-04-14T05:30:00Z",
+      "record_count_24h": 14891,
+      "tags": ["crm", "profile", "production", "client"]
+    },
+    {
+      "id": "ee5f6a7b8c9d0e1f2a3b4c5d",
+      "name": "meridian_email_campaigns",
+      "schema_id": "https://ns.adobe.com/meridian/schemas/email_engagement_v1",
+      "enabled": true,
+      "last_batch_at": "2026-04-14T20:00:00Z",
+      "record_count_24h": 22840,
+      "tags": ["email", "marketing", "production"]
+    },
+    {
+      "id": "ff6a7b8c9d0e1f2a3b4c5d6e",
+      "name": "meridian_seminar_registrations",
+      "schema_id": "https://ns.adobe.com/meridian/schemas/event_registration_v1",
+      "enabled": true,
+      "last_batch_at": "2026-04-13T18:00:00Z",
+      "record_count_24h": 0,
+      "tags": ["events", "marketing", "production"]
+    },
+    {
+      "id": "aa7b8c9d0e1f2a3b4c5d6e7f",
+      "name": "meridian_aum_snapshot",
+      "schema_id": "https://ns.adobe.com/meridian/schemas/aum_lookup_v1",
+      "enabled": true,
+      "last_batch_at": "2026-04-11T05:00:00Z",
+      "record_count_24h": 0,
+      "tags": ["lookup", "reference", "financial", "production"]
+    },
+    {
+      "id": "bb8c9d0e1f2a3b4c5d6e7f8a",
+      "name": "meridian_compliance_consents",
+      "schema_id": "https://ns.adobe.com/meridian/schemas/consent_record_v1",
+      "enabled": true,
+      "last_batch_at": "2026-04-14T04:00:00Z",
+      "record_count_24h": 3821,
+      "tags": ["compliance", "consent", "production"]
+    },
+    {
+      "id": "cc9d0e1f2a3b4c5d6e7f8a9b",
+      "name": "SANDBOX_lead_scoring_test",
+      "schema_id": "https://ns.adobe.com/meridian/schemas/advisor_web_events_v1",
+      "enabled": true,
+      "last_batch_at": "2026-02-28T10:00:00Z",
+      "record_count_24h": 0,
+      "tags": ["sandbox", "test"]
+    }
+  ],
+  "schemas": [
+    {
+      "id": "https://ns.adobe.com/meridian/schemas/advisor_web_events_v1",
+      "title": "Advisor Portal Web Events v1",
+      "class": "https://ns.adobe.com/xdm/context/experienceevent",
+      "fields": [
+        {"path": "_id", "type": "string", "required": true},
+        {"path": "timestamp", "type": "date-time", "required": true},
+        {"path": "web.webPageDetails.URL", "type": "string", "required": false},
+        {"path": "web.webPageDetails.name", "type": "string", "required": false},
+        {"path": "web.webInteraction.linkClicks.value", "type": "integer", "required": false},
+        {"path": "identityMap.ECID", "type": "string", "required": false},
+        {"path": "identityMap.AdvisorID", "type": "string", "required": false},
+        {"path": "advisorPortal.reportViewed", "type": "string", "required": false},
+        {"path": "advisorPortal.clientLookup.count", "type": "integer", "required": false}
+      ]
+    },
+    {
+      "id": "https://ns.adobe.com/meridian/schemas/client_web_events_v1",
+      "title": "Client Portal Web Events v1",
+      "class": "https://ns.adobe.com/xdm/context/experienceevent",
+      "fields": [
+        {"path": "_id", "type": "string", "required": true},
+        {"path": "timestamp", "type": "date-time", "required": true},
+        {"path": "web.webPageDetails.URL", "type": "string", "required": false},
+        {"path": "web.webPageDetails.name", "type": "string", "required": false},
+        {"path": "web.webInteraction.linkClicks.value", "type": "integer", "required": false},
+        {"path": "identityMap.ECID", "type": "string", "required": false},
+        {"path": "identityMap.ClientID", "type": "string", "required": false},
+        {"path": "investmentPortal.portfolioViewed", "type": "boolean", "required": false},
+        {"path": "investmentPortal.documentDownloaded", "type": "string", "required": false}
+      ]
+    },
+    {
+      "id": "https://ns.adobe.com/meridian/schemas/advisor_profile_v1",
+      "title": "Advisor CRM Profile v1",
+      "class": "https://ns.adobe.com/xdm/context/profile",
+      "fields": [
+        {"path": "_id", "type": "string", "required": true},
+        {"path": "person.name.firstName", "type": "string", "required": false},
+        {"path": "person.name.lastName", "type": "string", "required": false},
+        {"path": "personalEmail.address", "type": "string", "required": false},
+        {"path": "identityMap.AdvisorID", "type": "string", "required": true},
+        {"path": "advisor.region", "type": "string", "required": false},
+        {"path": "advisor.tierLevel", "type": "string", "required": false},
+        {"path": "advisor.aum_band", "type": "string", "required": false},
+        {"path": "consents.marketing.email.val", "type": "string", "required": false}
+      ]
+    },
+    {
+      "id": "https://ns.adobe.com/meridian/schemas/client_profile_v2",
+      "title": "Client CRM Profile v2",
+      "class": "https://ns.adobe.com/xdm/context/profile",
+      "fields": [
+        {"path": "_id", "type": "string", "required": true},
+        {"path": "person.name.firstName", "type": "string", "required": false},
+        {"path": "person.name.lastName", "type": "string", "required": false},
+        {"path": "personalEmail.address", "type": "string", "required": false},
+        {"path": "identityMap.ClientID", "type": "string", "required": true},
+        {"path": "client.relationshipTier", "type": "string", "required": false},
+        {"path": "client.onboardingStatus", "type": "string", "required": false},
+        {"path": "client.riskProfile", "type": "string", "required": false},
+        {"path": "consents.marketing.email.val", "type": "string", "required": false}
+      ]
+    },
+    {
+      "id": "https://ns.adobe.com/meridian/schemas/email_engagement_v1",
+      "title": "Email Engagement v1",
+      "class": "https://ns.adobe.com/xdm/context/experienceevent",
+      "fields": [
+        {"path": "_id", "type": "string", "required": true},
+        {"path": "timestamp", "type": "date-time", "required": true},
+        {"path": "directMarketing.emailDelivered.value", "type": "integer", "required": false},
+        {"path": "directMarketing.emailOpened.value", "type": "integer", "required": false},
+        {"path": "directMarketing.emailClicked.value", "type": "integer", "required": false},
+        {"path": "identityMap.ClientID", "type": "string", "required": false},
+        {"path": "directMarketing.emailCampaignName", "type": "string", "required": false}
+      ]
+    },
+    {
+      "id": "https://ns.adobe.com/meridian/schemas/event_registration_v1",
+      "title": "Seminar & Event Registration v1",
+      "class": "https://ns.adobe.com/xdm/context/experienceevent",
+      "fields": [
+        {"path": "_id", "type": "string", "required": true},
+        {"path": "timestamp", "type": "date-time", "required": true},
+        {"path": "eventDetails.eventName", "type": "string", "required": false},
+        {"path": "eventDetails.eventType", "type": "string", "required": false},
+        {"path": "eventDetails.registrationStatus", "type": "string", "required": false},
+        {"path": "identityMap.ClientID", "type": "string", "required": false}
+      ]
+    },
+    {
+      "id": "https://ns.adobe.com/meridian/schemas/aum_lookup_v1",
+      "title": "AUM Tier Lookup v1",
+      "class": "https://ns.adobe.com/xdm/classes/lookup",
+      "fields": [
+        {"path": "clientSegmentCode", "type": "string", "required": true},
+        {"path": "aumBand", "type": "string", "required": false},
+        {"path": "relationshipTier", "type": "string", "required": false},
+        {"path": "targetAdvisorCount", "type": "integer", "required": false}
+      ]
+    },
+    {
+      "id": "https://ns.adobe.com/meridian/schemas/consent_record_v1",
+      "title": "Compliance Consent Record v1",
+      "class": "https://ns.adobe.com/xdm/context/experienceevent",
+      "fields": [
+        {"path": "_id", "type": "string", "required": true},
+        {"path": "timestamp", "type": "date-time", "required": true},
+        {"path": "consents.marketing.email.val", "type": "string", "required": false},
+        {"path": "consents.marketing.push.val", "type": "string", "required": false},
+        {"path": "consents.share.val", "type": "string", "required": false},
+        {"path": "identityMap.ClientID", "type": "string", "required": false}
+      ]
+    }
+  ],
+  "data_views": [
+    {
+      "id": "dv_mc_a1b2c3d4e5f6",
+      "name": "Meridian Advisor Journey",
+      "datasets": ["aa1b2c3d4e5f6a7b8c9d0e1f", "cc3d4e5f6a7b8c9d0e1f2a3b"],
+      "timezone": "America/New_York",
+      "session_timeout_minutes": 30,
+      "person_id": "identityMap.AdvisorID",
+      "stitching_enabled": true,
+      "lookback_months": 13
+    },
+    {
+      "id": "dv_mc_b2c3d4e5f6a7",
+      "name": "Meridian Client Engagement",
+      "datasets": ["bb2c3d4e5f6a7b8c9d0e1f2a", "dd4e5f6a7b8c9d0e1f2a3b4c", "ee5f6a7b8c9d0e1f2a3b4c5d"],
+      "timezone": "America/New_York",
+      "session_timeout_minutes": 20,
+      "person_id": "identityMap.ClientID",
+      "stitching_enabled": true,
+      "lookback_months": 25
+    },
+    {
+      "id": "dv_mc_c3d4e5f6a7b8",
+      "name": "Meridian Marketing & Events",
+      "datasets": ["ee5f6a7b8c9d0e1f2a3b4c5d", "ff6a7b8c9d0e1f2a3b4c5d6e"],
+      "timezone": "America/New_York",
+      "session_timeout_minutes": 60,
+      "person_id": "identityMap.ClientID",
+      "stitching_enabled": false,
+      "lookback_months": 13
+    }
+  ],
+  "segments": [
+    {
+      "id": "seg_mc_a1b2c3d4",
+      "name": "High-AUM Clients Not Logged In (30d)",
+      "definition": "client.relationshipTier IN ('premier','private-wealth') AND NOT investmentPortal.portfolioViewed (trailing 30d)",
+      "data_view_id": "dv_mc_b2c3d4e5f6a7",
+      "size_estimate": 3812,
+      "enabled": true
+    },
+    {
+      "id": "seg_mc_b2c3d4e5",
+      "name": "Advisors Below Engagement Threshold",
+      "definition": "advisorPortal.reportViewed < 2 AND advisorPortal.clientLookup.count < 5 (trailing 14d)",
+      "data_view_id": "dv_mc_a1b2c3d4e5f6",
+      "size_estimate": 621,
+      "enabled": true
+    },
+    {
+      "id": "seg_mc_c3d4e5f6",
+      "name": "Seminar Attendees - No Follow-Up",
+      "definition": "eventDetails.registrationStatus = 'attended' AND NOT directMarketing.emailClicked (trailing 14d)",
+      "data_view_id": "dv_mc_c3d4e5f6a7b8",
+      "size_estimate": 1448,
+      "enabled": true
+    },
+    {
+      "id": "seg_mc_d4e5f6a7",
+      "name": "New Client Onboarding (90d)",
+      "definition": "client.onboardingStatus = 'in-progress' (trailing 90d)",
+      "data_view_id": "dv_mc_b2c3d4e5f6a7",
+      "size_estimate": 7203,
+      "enabled": true
+    }
+  ],
+  "dimensions": [
+    {"data_view_id": "dv_mc_a1b2c3d4e5f6", "name": "Advisor Region", "source_field": "advisor.region"},
+    {"data_view_id": "dv_mc_a1b2c3d4e5f6", "name": "Advisor Tier", "source_field": "advisor.tierLevel"},
+    {"data_view_id": "dv_mc_a1b2c3d4e5f6", "name": "Report Viewed", "source_field": "advisorPortal.reportViewed"},
+    {"data_view_id": "dv_mc_b2c3d4e5f6a7", "name": "Client Relationship Tier", "source_field": "client.relationshipTier"},
+    {"data_view_id": "dv_mc_b2c3d4e5f6a7", "name": "Client Risk Profile", "source_field": "client.riskProfile"},
+    {"data_view_id": "dv_mc_b2c3d4e5f6a7", "name": "Document Downloaded", "source_field": "investmentPortal.documentDownloaded"},
+    {"data_view_id": "dv_mc_c3d4e5f6a7b8", "name": "Event Name", "source_field": "eventDetails.eventName"},
+    {"data_view_id": "dv_mc_c3d4e5f6a7b8", "name": "Campaign Name", "source_field": "directMarketing.emailCampaignName"}
+  ],
+  "metrics": [
+    {"data_view_id": "dv_mc_a1b2c3d4e5f6", "name": "Client Lookups", "source_field": "advisorPortal.clientLookup.count"},
+    {"data_view_id": "dv_mc_a1b2c3d4e5f6", "name": "Portal Link Clicks", "source_field": "web.webInteraction.linkClicks.value"},
+    {"data_view_id": "dv_mc_b2c3d4e5f6a7", "name": "Email Opens", "source_field": "directMarketing.emailOpened.value"},
+    {"data_view_id": "dv_mc_b2c3d4e5f6a7", "name": "Email Clicks", "source_field": "directMarketing.emailClicked.value"},
+    {"data_view_id": "dv_mc_c3d4e5f6a7b8", "name": "Event Registrations", "source_field": "eventDetails.registrationStatus"}
+  ],
+  "stitching": {
+    "dv_mc_a1b2c3d4e5f6": {"coverage_pct": 87.3, "method": "private-graph", "primary_identity": "AdvisorID"},
+    "dv_mc_b2c3d4e5f6a7": {"coverage_pct": 79.1, "method": "private-graph", "primary_identity": "ClientID"}
+  }
+}
